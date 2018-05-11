@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "build": "NODE_ENV=production  rollup -c -o bundle.js",
+    "dev": "rollup -c -w",
+	"minify": "uglifyjs index.js --comments-/^!/ --compress --mangle -o index.min.js"
+  },
+  "dependencies": {
+    "hyperhtml": "^2.5.10"
+  },
+  "devDependencies": {
+    "rollup-plugin-node-resolve": "^3.0.3",
+    "rollup-plugin-scss": "^0.4.0",
+    "rollup-watch": "^4.3.1",
+    "uglify-es": "^3.3.9"
+  }
+}
