@@ -1,6 +1,9 @@
 button {
-	border: 1px #06C solid;
-	padding: 5px;
-	background: #FFF;
+    border: 1px #06C solid;
+    padding: 5px;
+    background: #FFF;
+    &:hover {
+        border: 1px red solid;
+    }
 }
 

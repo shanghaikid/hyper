@@ -2,7 +2,7 @@
   "scripts": {
     "build": "NODE_ENV=production  rollup -c -o bundle.js",
     "dev": "rollup -c -w",
-	"minify": "uglifyjs index.js --comments-/^!/ --compress --mangle -o index.min.js"
+    "minify": "uglifyjs index.js --comments-/^!/ --compress --mangle -o index.min.js"
   },
   "dependencies": {
     "hyperhtml": "^2.5.10"
