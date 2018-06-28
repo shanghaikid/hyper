@@ -14,6 +14,8 @@ export default {
     },
     plugins: [resolve(), scss(scssOptions)],
     watch: {
+        chokidar: false,
+        clearScreen: false,
         exclude: "node_modules/**"
     }
 };
