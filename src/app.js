@@ -46,8 +46,6 @@ class App extends HTMLElement {
                 <option value="o3">option3</option>
                 <option value="o4">option4</option>
             </hyper-select>
-            <h3>Carousel</h3>
-            <hyper-carousel></hyper-carousel>
             <h3>Grid system</h3>
             <h3>Line chart</h3>
     `;
