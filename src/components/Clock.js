@@ -28,8 +28,8 @@ class Clock extends HTMLElement {
     }
     render() {
         return this.html`
-			It is ${new Date().toLocaleTimeString()}. 
-		`;
+            It is ${new Date().toLocaleTimeString()}. 
+        `;
     }
 }
 

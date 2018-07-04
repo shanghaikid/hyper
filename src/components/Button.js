@@ -17,8 +17,8 @@ class Button extends HTMLElement {
     }
     render() {
         return this.html`
-			<button>${this.getAttribute("label")}</button>
-		`;
+            <button>${this.getAttribute("label")}</button>
+        `;
     }
 }
 
