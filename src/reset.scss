@@ -2,3 +2,24 @@
     margin: 0;
     padding:0;
 }
+
+/* Mobile Styles */
+@media only screen and (max-width: 420px) {
+  body {
+    background-color: #F09A9D;
+  }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 768px) and (max-width: 960px) {
+  body {
+    background-color: #F5CF8E;
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+  body {
+    background-color: #FFF;
+  }
+}
