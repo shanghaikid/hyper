@@ -29,6 +29,6 @@ class App extends HTMLElement {
 	}
 }
 
-customElements.define('hyper-app', App);
+customElements.define("hyper-app", App);
 
-export {App};
+export { App };

@@ -3,7 +3,7 @@ import replace from 'rollup-plugin-replace';
 import scss from 'rollup-plugin-scss';
 
 let scssOptions = {
-	output: 'style.css',
+    output: "style.css"
 };
 
 export default {
