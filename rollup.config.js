@@ -1,4 +1,5 @@
 import resolve from 'rollup-plugin-node-resolve';
+import replace from 'rollup-plugin-replace';
 import scss from 'rollup-plugin-scss';
 
 let scssOptions = {
@@ -13,6 +14,9 @@ export default {
 	},
 	//sourceMap: 'inline',
 	plugins: [ 
+		replace({
+			'process.env.NODE_ENV': JSON.stringify('production')
+		}),
 		resolve(),
 		scss(scssOptions)
 	],

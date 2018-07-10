@@ -1,7 +1,5 @@
 import {hyper, wire, bind, Component} from 'hyperhtml/esm';
-import {Clock} from  './components/Clock';
-import {Button} from './components/Button';
-import {Select} from './components/Select';
+import { Redux } from './components/Redux';
 
 class App extends HTMLElement {
 	constructor(...args) {
@@ -26,17 +24,7 @@ class App extends HTMLElement {
 	}
 	render() {
 		return this.html`
-			<h1>My Hyper HTML Playground</h1>
-			<h3>Clock</h3>
-			<hyper-clock stop=${this.state.clock.stop} />
-			<h3>Button</h3>
-			<hyper-button onclick=${this} label=${this.state.clock.stop ? 'Resume': 'Stop'}></hyper-button>
-			<h3>Select</h3>
-			<hyper-select></hyper-select>
-			<h3>Carousel</h3>
-			<hyper-carousel></hyper-carousel>
-			<h3>Grid system</h3>
-			<h3>Line chart</h3>
+			<hyper-redux label="redux"></hyper-redux>
 		`;
 	}
 }
