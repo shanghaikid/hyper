@@ -16,3 +16,35 @@
 @media only screen and (min-width: 961px) {
   body {
     background-color: #FFF; } }
+
+button {
+  border: 1px #06C solid;
+  padding: 5px;
+  background: #FFF; }
+  button:hover {
+    border: 1px red solid; }
+
+hyper-redux {
+  display: block;
+  margin-top: 100px; }
+  hyper-redux div {
+    border: 1px #06C solid;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto; }
+  hyper-redux .container {
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d; }
+  hyper-redux .f, hyper-redux .b {
+    position: absolute;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    backface-visibility: hidden; }
+  hyper-redux .b {
+    transform: rotateY(180deg); }
+  hyper-redux .fff {
+    transform: perspective(100px) rotateY(180deg); }
+  hyper-redux .hidden {
+    display: none; }

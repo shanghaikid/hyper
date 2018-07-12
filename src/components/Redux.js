@@ -1,5 +1,6 @@
 import { wire, bind } from 'hyperhtml/esm';
 import { createStore, combineReducers, applyMiddleware} from 'redux'
+import "./Redux.scss";
 
 const reducer1 = (state = {text : 'reducer'}, action) => {
     switch (action.type) {
@@ -59,7 +60,7 @@ const apiMiddleware = store => next => action => {
     });
 }
 
-const store = createStore(combineReducers({ reducer1, reducer2 }), {}, applyMiddleware(apiMiddleware));
+const store = createStore(combineReducers({ reducer1, reducer2 }), { reducer1: {text: 'front'}}, applyMiddleware(apiMiddleware));
 
 
 class Redux extends HTMLElement {
@@ -70,11 +71,20 @@ class Redux extends HTMLElement {
         super(...args);
         this.html = bind(this);
         window.store = store;
-        this.state = store.getState().reducer1;
+        this.store = store;
+        this.state = this.store.getState().reducer1;
         store.subscribe((() => {
             this.state = store.getState().reducer1;
             this.render();
         }))
+    }
+    handleEvent(e) {
+        if (e.type === 'click') {
+            this.onclick(e);
+        }
+    }
+    onclick(e) {
+        this.store.dispatch({ type: 1, text: Math.random() * 2 > 1 ? '2' : 'fff' })
     }
     attributeChangedCallback() {
         this.render();
@@ -84,7 +94,10 @@ class Redux extends HTMLElement {
     }
     render() {
         return this.html`
-            <div>${this.state.text}</div>
+            <div class=${"container " + this.state.text} onclick=${this}>
+            <div class="f" ><span>front</span></div>
+            <div class="b"><span>back</span></div>
+            </div>
         `;
     }
 }
