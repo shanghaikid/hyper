@@ -2021,6 +2021,7 @@
   	render() {
   		return this.html`
 			<hyper-redux label="redux"></hyper-redux>
+			<hyper-redux label="redux"></hyper-redux>
 		`;
   	}
   }
