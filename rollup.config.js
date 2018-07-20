@@ -7,20 +7,20 @@ let scssOptions = {
 };
 
 export default {
-	input: 'src/index.js',
-	output: {
-		file: 'app.js',
-		format: 'iife'
-	},
-	//sourceMap: 'inline',
-	plugins: [ 
-		replace({
-			'process.env.NODE_ENV': JSON.stringify('production')
-		}),
-		resolve(),
-		scss(scssOptions)
-	],
-	watch: {
-		exclude: 'node_modules/**'
-	}
+    input: 'src/index.js',
+    output: {
+        file: 'app.js',
+        format: 'iife'
+    },
+    //sourceMap: 'inline',
+    plugins: [ 
+        replace({
+            'process.env.NODE_ENV': JSON.stringify('production')
+        }),
+        resolve(),
+        scss(scssOptions)
+    ],
+    watch: {
+        exclude: 'node_modules/**'
+    }
 }
