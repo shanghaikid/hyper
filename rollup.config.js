@@ -2,13 +2,13 @@ import resolve from "rollup-plugin-node-resolve";
 import scss from "rollup-plugin-scss";
 
 let scssOptions = {
-    output: "style.css"
+    output: "build/style.css"
 };
 
 export default {
     input: "src/index.js",
     output: {
-        file: "app.js",
+        file: "build/app.js",
         format: "iife",
         sourcemap: "inline"
     },
