@@ -41,10 +41,3 @@ hyper-redux {
     transform: perspective(100px) rotateY(180deg); }
   hyper-redux .hidden {
     display: none; }
-
-button {
-  border: 1px #06C solid;
-  padding: 5px;
-  background: #FFF; }
-  button:hover {
-    border: 1px red solid; }

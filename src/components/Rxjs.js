@@ -2,9 +2,8 @@ import { fromEvent} from 'rxjs';
 import { map, filter, scan } from 'rxjs/operators';
 
 
-import { wire, bind } from 'hyperhtml/esm';
+import { wire, bind } from 'hyperhtml';
 import "./Redux.scss";
-import { Button } from './Button';
 
 
 class Rxjs extends HTMLElement {
