@@ -3,14 +3,15 @@ import replace from 'rollup-plugin-replace';
 import scss from 'rollup-plugin-scss';
 
 let scssOptions = {
-    output: "style.css"
+    output: "build/style.css"
 };
 
 export default {
     input: 'src/index.js',
     output: {
-        file: 'app.js',
-        format: 'iife'
+        file: "build/app.js",
+        format: "iife",
+        sourcemap: "inline"
     },
     //sourceMap: 'inline',
     plugins: [ 
